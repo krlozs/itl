@@ -1,0 +1,236 @@
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: F37GingerPro;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url(../resources/fonts/F37GingerPro-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: F37GingerPro;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url(../resources/fonts/F37GingerPro-Semi.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: F37GingerPro;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url(../resources/fonts/F37GingerPro-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: F37GingerPro;
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url(../resources/fonts/F37GingerPro-Black.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url(../resources/fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url(../resources/fonts/Poppins-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url(../resources/fonts/Poppins-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url(resources/fonts/Poppins-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url(../resources/fonts/Poppins-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url(../resources/fonts/OpenSans-Bold.ttf) format('truetype');
+}
+
+
+  
+:root{
+  font-family: F37GingerPro;
+  font-size: 14px;
+  --color-primary: #0095FF;
+  --color-secondary:#14053e;
+  --color-light-gray: #eee;
+  --color-gray: #a7a7a7;
+  --color-dark-gray: #666666;
+  --color-light-primary: #3aacfd;
+}
+
+body {
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.login.login-v1 {
+    background-image: url('../admin/images/interlan_login.jpg');
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    & .login-container {
+        background-color: var(--color-light-gray);
+        width: 500px;
+        max-width: 100%;
+        flex: none;
+        padding: 30px 0px;
+        transform: translate(-75px, 150px);
+        & .login-body {
+               background-color: transparent;
+               &::before{
+                    content: "Bienvenido a Interlan";
+                    color: var(--color-primary);
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: clamp(2.5rem, 3vw, 2.5rem);
+                    line-height: 3rem;
+                    padding-left: 20px;
+                    display: block;
+
+               }
+            & .login-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    position: relative;
+                    gap: 30px;
+                    margin-top: 20px;
+                    &::before{
+                        content: "Primeros con fibra óptica a las casas y negocios de familias peruanas";
+                        color: #000;
+                        padding-left: 40px;
+                    }
+                    
+                    &::after {
+                        content: "";
+                        width: 6px;
+                        height: 50px;
+                        background-color: var(--color-dark-gray);
+                        position: absolute;
+                        left: 20px;
+                        top: -5px;
+                        rotate: 15deg;
+                    }
+                & .form-control{
+                    padding-left: 60px;
+                    width: 100%;
+                    font-weight: 500;
+                    color: var(--color-secondary);
+                    border: 2px solid var(--color-dark-gray);
+                    border-radius: 10px;
+                    font-size: 14px;
+                    background-image: url('../admin/images/bi--person-circle.png');
+                    background-repeat: no-repeat;
+                    background-size: 25px;
+                    background-position: 15px center;
+                    &::placeholder{
+                    color: var(--color-dark-gray);
+                    }
+                    &:focus, &:focus-visible{
+                        border-color: var(--color-secondary);
+                    }
+                    
+                }
+                
+                & .form-group:nth-child(3){
+                    & .form-control{
+                        background-image: url('../admin/images/mdi--password.png');
+                    }
+                }
+                
+                & button{
+                    padding: 15px 20px;
+                    border: none;
+                    border-radius: 10px;
+                    background-color: var(--color-primary);
+                    font-family: OpenSans;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    color: #fff;
+                    cursor: pointer;
+                    position: relative;
+                    overflow: hidden;
+                    text-decoration: none;
+                    text-align: center;
+                    transition: background-color .3s ease;
+                    &:hover{
+                        background-color: var(--color-secondary);
+                    }
+                }
+                
+                & .checkbox label{
+                    color: var(--color-gray);
+                    margin-bottom: 20px;
+                    &::before{
+                        border-radius: 20px;
+                        accent-color: var(--color-primary);
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.login.login-v1 .login-container .login-header {
+    display: none;
+}
+
+@media screen and (max-width: 767px){
+    .login.login-v1 {
+        background-image: url('../admin/images/interlan_login-movil.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-color: var(--color-light-gray);
+        & .login-container {
+            transform: translate(0px, 0px);
+            background-position: top center;
+        }
+    }
+}
+
+
+
+  
+
+  
